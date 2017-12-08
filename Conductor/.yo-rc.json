@@ -1,0 +1,9 @@
+{
+  "generator-kotlin-android-conductor": {
+    "promptValues": {
+      "name": "Conductor",
+      "targetSdk": 26,
+      "minSdk": "21"
+    }
+  }
+}

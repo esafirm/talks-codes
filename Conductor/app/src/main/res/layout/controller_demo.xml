@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textColor="#222"
+        android:textSize="22sp"
+        tools:text="Added At Maghrib"/>
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Moar Controller (Push)"/>
+
+    <Button
+        android:id="@+id/button_remove"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Remove This (POP)"/>
+
+    <Button
+        android:id="@+id/button_set_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go To Root (SET ROOT)"/>
+
+    <Button
+        android:id="@+id/button_backstack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Moar, but this time 10 Moar (Add BACKSTACK)"/>
+
+</LinearLayout>

@@ -10,7 +10,7 @@ class LoginPresenter @Inject constructor() {
 
     private val subject = BehaviorSubject.create<LoginState>()
 
-    fun getObservable() = subject.observeOn(AndroidSchedulers.mainThread())
+    fun getObservable() = subject.observeOn(AndroidSchedulers.mainThread())!!
 
     fun login(username: String, password: String) {
         verifyForm(username, password)

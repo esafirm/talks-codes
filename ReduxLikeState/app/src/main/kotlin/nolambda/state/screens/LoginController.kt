@@ -27,7 +27,8 @@ class LoginController : AbsController() {
         presenter.getObservable().subscribe { state ->
             renderError(state)
             renderLoading(state)
-
+            renderButton(state)
+                                             
             if (state.isLoginSuccess) {
                 Toast.makeText(applicationContext, "Login Success!", Toast.LENGTH_SHORT)
                         .show()
@@ -47,6 +48,13 @@ class LoginController : AbsController() {
         progress.visibility = when (state.isLoading) {
             true -> View.VISIBLE
             false -> View.GONE
+        }
+    }
+    
+    private fun renderButton(state: LoginState) {
+        btnLogin.isEnabled = when (state.isButtonEnabled) {
+            true -> true
+            false -> false
         }
     }
 

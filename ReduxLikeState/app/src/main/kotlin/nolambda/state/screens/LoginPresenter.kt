@@ -55,10 +55,10 @@ class LoginPresenter @Inject constructor() {
     private fun reduce(action: LoginAction): LoginState {
         val prevState = subject.value ?: LoginState()
         return when (action) {
-            ShowLoading -> prevState.copy(isLoading = true, error = null, formError = null)
+            ShowLoading -> prevState.copy(isLoading = true, error = null, formError = null, isButtonEnabled = false)
             ShowLoginSuccess -> prevState.copy(isLoading = false, isLoginSuccess = true)
-            is ShowError -> prevState.copy(isLoading = false, error = action.error)
-            is ShowFormError -> prevState.copy(isLoading = false, formError = action.formError)
+            is ShowError -> prevState.copy(isLoading = false, error = action.error, isButtonEnabled = true)
+            is ShowFormError -> prevState.copy(isLoading = false, formError = action.formError, isButtonEnabled = true)
         }
     }
 }
